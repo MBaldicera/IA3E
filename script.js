@@ -43,22 +43,34 @@ const perguntas = [//abre a lista de objetos (itens)
 ]
 let posicao = 0;
 let perguntaAtual;
+let respostas = "";
 
 
 function mostraPergunta() {
+    if (posicao>=perguntas.length){
+        mostraResultado();
+        return;
+    }
     perguntaAtual = perguntas[posicao];
     caixaPergunta.textContent = perguntaAtual.enunciado;
+    caixaAlternativa.textContent = " ";
     mostraAlternativas();
 }
 function mostraAlternativas() {
     for (const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativas = document.createElement("button");
         botaoAlternativas.textContent = alternativa.texto;
-        botaoAlternativas.addEventListener("click",  function(){
-            posicao++;
-            mostraPergunta();
-        });
+        botaoAlternativas.addEventListener("click",  () => respostasSelecionadas(alternativa));
         caixaAlternativa.appendChild(botaoAlternativas);
     }
+}
+function respostasSelecionadas(opcaoSelecionada){
+    const afirmacoes = opcaoSelecionada.afirmação;
+    respostas = afirmacoes;
+    posicao++;
+    mostraPergunta();
+}
+function mostraResultado(){
+    caixaPergunta.textContent = "Daqui a 10 anos... ";
 }
 mostraPergunta();

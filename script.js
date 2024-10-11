@@ -2,16 +2,17 @@ const caixaPrincipal = document.querySelector('.caixa-principal');
 const caixaPergunta = document.querySelector('.caixa-pergunta');
 const caixaAlternativa = document.querySelector('.caixa-alternativa');
 const caixaResultado = document.querySelector('.caixa-resultado');
+const textoResultado = document.querySelector('.texto-resultado');
 
 const perguntas = [     //serve para abrir lista de perguntas
     {   //abre o objeto das perguntas
-        enunciado: "Você acha que IA vai dominar o mundo?",
+        enunciado: "Você gosta do cachorro da vizinha?",
         alternativas: [
-            {texto: "Sim",
-            afirmação:"A IA vai dominar o mundo"}, 
+            {texto: "Sim, eu gosto",
+            afirmação:"Eu gosto bastante de animais, inclusive a vizinha"}, 
 
-            {texto: "Não",
-            afirmação:"A IA não dominará o mundo"}]
+            {texto: "Não, não gosto",
+            afirmação:"Não gosto, muito menos da vizinha"}]
     },
     { 
         enunciado: "A IA vai substituir os professores?",

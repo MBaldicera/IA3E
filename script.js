@@ -3,43 +3,34 @@ const caixaPergunta = document.querySelector('.caixa-pergunta');
 const caixaAlternativa = document.querySelector('.caixa-alternativa');
 const caixaResultado = document.querySelector('.caixa-resultado');
 
-const perguntas = [//abre a lista de objetos (itens)
-    {//abre o item
-        enunciado: "Você gosta da Inteligência Artificial?",
-        alternativas: [{
-            texto: "Sim",
-            afirmação: "Afirmação da alternativa 1"
-        },
-        {
-            texto: "Não",
-            afirmação: "Afirmação da alternativa"
-        }
-        ]
+const perguntas = [     //serve para abrir lista de perguntas
+    {   //abre o objeto das perguntas
+        enunciado: "Você acha que IA vai dominar o mundo?",
+        alternativas: [
+            {texto: "Sim",
+            afirmação:"A IA vai dominar o mundo"}, 
+
+            {texto: "Não",
+            afirmação:"A IA não dominará o mundo"}]
     },
-    {
-        enunciado: "Pergunta 2",
-        alternativas: [{
-            texto: "Quem sabe...",
-            afirmação: "Afirmação da alternativa 1"
-        },
-        {
-            texto:"Talvez",
-            afirmação:"Afirmação da alternativa 2"
-        }
-        ]
+    { 
+        enunciado: "A IA vai substituir os professores?",
+        alternativas: [
+            {texto: "Sim",
+            afirmação:"A IA logo tomará o lugar dos professores"}, 
+                
+            {texto: "Não",
+            afirmação:"A IA jamais tomará o lugar dos professores"}]
     },
-    {
-        enunciado: "Pergunta 3",
-        alternativas: [{
-            texto: "Sim",
-            afirmação: "Afirmação da alternativa 1"
-        },
-        {
-            texto: "Não",
-            afirmação: "Afirmação da alternativa"
-        }
-        ]
-    }
+    { 
+        enunciado: "A IA está pronta para todos?",
+        alternativas: [
+            {texto: "Sim",
+            afirmação:"Sim, a IA será útil e está pronta para todos"}, 
+                
+            {texto: "Não",
+            afirmação:"Não, a IA não é para o uso de todos"}]
+    },
 ]
 let posicao = 0;
 let perguntaAtual;
